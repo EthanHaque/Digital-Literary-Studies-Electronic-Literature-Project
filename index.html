@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Textgazer</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="UTF-8">
+</head>
+
+
+<body>
+	<script src="js/d3.js"></script>
+	<script src="js/webgazer.js"></script>
+	<script src="js/explaination.js"></script>
+
+
+	<audio id="music1">
+		<source src="music/tokyo.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="music2">
+		<source src="music/maki.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="music3">
+		<source src="music/lone.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="music4">
+		<source src="music/child.mp3" type="audio/mpeg">
+	</audio>
+
+	<div id="explanation" style="text-align: center;">
+		<div style="padding-left: 325px; padding-right: 325px;">
+			<h2>
+				Important Instructions!
+			</h2>
+			<p>
+				If you get a popup about running a local server, don't worry about it. Our project should
+				work either way. You need a webcam and our software needs access to it for the project
+				to work as inteded as well. A box will pop up with the feed from your camera with a box
+				in the middle of it. Make sure your entire head is inside that box and that the green
+				face outline conforms to your face correctly. Our project attemps to track your eyes
+				and play music corresponding to the tone of the passage of a text you will see after
+				the calibraiton page. At the bottom of this page is a button to go to the calibration
+				page where you will see a bunch of buttons in a grid. Calibration is done by
+				looking at where you are clicking with the mouse. It is super important that you are
+				looking at the mouse while you are clicking because our software learns from where you
+				click and assumes that you are looking at the mouse while you click. Click on the button
+				at the bottom of the page to move on when you are ready.
+			</p>
+			<p>
+				-Ethan, Brandon, Jimmy
+			</p>
+			<h2>
+				Artist Statement
+			</h2>
+			<p>
+				The idea behind our electronic literature project is to increase reader immersion and describe the
+				author’s vision of the mood of a passage to add depth to a story or poem. To accomplish this, we added
+				music to a short story using an eye-tracker. The job of the eye tracker is to map out a person’s face,
+				find their eyes in a video feed provided by their webcam, and predict where they are looking. The gaze
+				prediction data is fed to a collision detection system, which determines what part of the text the
+				reader is on. Each text element has music or sound effects mapped to it that triggers when the reader
+				looks at it. The addition of music on visual queues helps the reader understand the mood of the text
+				better and allows the author to have more creative freedom and influence over how the reader interacts
+				with their text. The blend of position-based audio and literature also creates a unique form of
+				dual-sensory stimuli, which is unlike other visual-auditory media, such as a movie, a music video, or
+				reading a piece of literature while listening to music separately. The story is smart in the sense that
+				it knows where you are, so, unlike most other mediums, it can react to the reader in meaningful ways.
+				For example, adding sound effects like the chatter of people in a crowded area or the sound of rain over
+				certain sections of the story is simple and adds to the experience of reading the text. The story we
+				wrote to showcase this was about a relatable moment where an IMSA student first set foot on campus. The
+				story goes through different emotions and feelings the narrator experienced on their first day. While
+				describing their thoughts, the narrator also illustrates their unique experience of interacting with new
+				people, such as their RC and upperclassmen and living in a new environment. Using the tone of the
+				thoughts and emotions the narrator is describing, we mapped a music track to the story that matches the
+				mood throughout. Our example doesn't capture all the different ways we hoped that our software could be
+				used. Our project is a balance of portability and functionality, meaning that we tried to make it so
+				that anyone with a computer and webcam could use it, but that came at the cost of accuracy and a little
+				functionality. In theory, if we could guess where a reader was looking down to the specific word or
+				sentence that they were reading, then we could add much finer details in the sound or music that we
+				added to a story. We imagined how this could be expanded and applied to genres like horror or mystery
+				where we could hide things in the reader's peripheral vision, for example. With enough time, it is
+				possible to use semantic analysis to automatically generate music and sounds for any text, but our
+				project more so serves to prove that it is possible to add music to a story given all the limitations we
+				have.
+			</p>
+		</div>
+
+		<button onclick="endExplanation()" style="background-color: aqua;">Go on to calibration</button>
+	</div>
+
+	<script src="js/calibration.js"></script>
+	<script src="js/textGazer.js"></script>
+</body>
+
+</html>
